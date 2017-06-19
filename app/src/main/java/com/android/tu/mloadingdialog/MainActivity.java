@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.android.tu.loadingdialog.LoadingDailog;
+import com.android.tu.loadingdialog.LoadingDialog;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -27,10 +27,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.style1_btn:
-                LoadingDailog.Builder builder1=new LoadingDailog.Builder(MainActivity.this)
+                LoadingDialog.Builder builder1=new LoadingDialog.Builder(MainActivity.this)
                         .setMessage("加载中...")
                         .setCancelable(false);
-                final LoadingDailog dialog1=builder1.create();
+                final LoadingDialog dialog1=builder1.create();
                 dialog1.show();
                 handler.postDelayed(new Runnable() {
                     @Override
@@ -40,10 +40,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 },2000);
                 break;
             case R.id.style2_btn:
-                LoadingDailog.Builder builder2=new LoadingDailog.Builder(MainActivity.this)
+                LoadingDialog.Builder builder2=new LoadingDialog.Builder(MainActivity.this)
                         .setShowMessage(false)
                         .setCancelable(false);
-                final LoadingDailog dialog2=builder2.create();
+                final LoadingDialog dialog2=builder2.create();
                 dialog2.show();
                 handler.postDelayed(new Runnable() {
                     @Override
