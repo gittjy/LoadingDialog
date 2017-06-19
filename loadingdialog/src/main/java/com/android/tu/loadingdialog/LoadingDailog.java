@@ -24,9 +24,9 @@ public class LoadingDailog extends Dialog{
 
         private Context context;
         private String message;
-        private boolean isShowMessage;
-        private boolean isCancelable;
-        private boolean isCancelOutside;
+        private boolean isShowMessage=true;
+        private boolean isCancelable=false;
+        private boolean isCancelOutside=false;
 
 
         public Builder(Context context) {
